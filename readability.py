@@ -1,25 +1,4 @@
 from cs50 import get_string
-
-
-def calculate_readability():
-
-    text = get_string("Paste text here: ")
-    words = word_counter(text)
-    L = letter_counter(text) / (words / 100)
-    S = sentence_counter(text) / (words / 100)
-    readability = (0.0588 * L) - (0.296 * S) - 15.8
-
-    if readability < 1:
-        print("Before Grade 1")
-
-    # After Grade 16
-
-    elif readability >= 16:
-        print("Grade 16+")
-
-    else:
-        readability = round(readability)
-        print("Grade " + str(readability))
         
 
 def letter_counter(text):
@@ -62,6 +41,26 @@ def sentence_counter(text):
                 return sentence_count
       
     return sentence_count
+
+def calculate_readability():
+
+    text = get_string("Paste text here: ")
+    words = word_counter(text)
+    L = letter_counter(text) / (words / 100)
+    S = sentence_counter(text) / (words / 100)
+    readability = (0.0588 * L) - (0.296 * S) - 15.8
+
+    if readability < 1:
+        print("Before Grade 1")
+
+    # After Grade 16
+
+    elif readability >= 16:
+        print("Grade 16+")
+
+    else:
+        readability = round(readability)
+        print("Grade " + str(readability))
 
 
 calculate_readability()
