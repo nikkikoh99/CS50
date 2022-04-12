@@ -1,4 +1,4 @@
-CS50 project repository. Contains the programs that I'm going to use for my coding portfolio:
+Harvard CS50 project repository. Contains the programs that I'm going to use for my coding portfolio:
 
 1. two cipher files: caesar.c and substitution.c
 2. readability.c: a program for counting the reading grade level of a text
